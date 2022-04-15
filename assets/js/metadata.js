@@ -28,8 +28,8 @@ function getHumanReadableSize(bytes) {
     if (bytes == 0) {
         return '0.00 B';
     }
-    var e = Math.floor(Math.log(bytes) / Math.log(1000));
-    return (bytes / Math.pow(1000, e)).toFixed(2) + ' ' + ['', 'k', 'M', 'G', 'T', 'P'][e] + 'B';
+    var e = Math.floor(Math.log(bytes) / Math.log(1024));
+    return (bytes / Math.pow(1024, e)).toFixed(2) + ' ' + ['', 'k', 'M', 'G', 'T', 'P'][e] + 'iB';
 }
 
 function updateMetadata() {
